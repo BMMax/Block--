@@ -11,6 +11,18 @@
 int number1_ = 10;
 static int number2_ = 20;
 
+
+void(^block_)(void);
+void test() {
+    int a = 10;
+    void(^block)(void) = ^ {
+        NSLog(@"text---block----%d",a);
+    };
+
+    block_ = block;
+}
+
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
@@ -82,6 +94,17 @@ int main(int argc, const char * argv[]) {
 
 
 
+        int b = 20;
+        void(^block4)(void) = ^ {
+            NSLog(@"block4-----%d--",b);
+
+        };
+        NSLog(@"block4类型---%@",[block4 class]);
+
+        test();
+        block_();
+
     }
     return 0;
 }
+
