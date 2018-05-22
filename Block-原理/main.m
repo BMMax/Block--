@@ -51,16 +51,37 @@ int main(int argc, const char * argv[]) {
 //        block();
 
         /// 04: 全局变量不会捕获
-        void(^block)(void) = ^{
-            NSLog(@"全局变量: number1->%d, number2->%d",number1_,number2_);
+//        void(^block)(void) = ^{
+//            NSLog(@"全局变量: number1->%d, number2->%d",number1_,number2_);
+//        };
+//
+//        number1_ = 1;
+//        number2_ = 2;
+//
+//        block();
+
+
+
+        //// block 类型
+        void(^block1)(void) = ^ {
+            NSLog(@"block1-----");
         };
 
-        number1_ = 1;
-        number2_ = 2;
+        NSLog(@"block1类型---%@",[block1 class]);
 
-        block();
+        static int a = 10;
+        void(^block2)(void) = ^ {
+            NSLog(@"block1-----%d",a);
+        };
+        NSLog(@"block2类型---%@",[block2 class]);
 
-        
+        void(^block3)(void) = ^ {
+            NSLog(@"block3-----%d---%d",number1_,number2_);
+        };
+        NSLog(@"block3类型---%@",[block3 class]);
+
+
+
     }
     return 0;
 }

@@ -25,6 +25,11 @@
 /* Begin PBXFileReference section */
 		CE7AE5E620B3A7B90033356D /* Block-原理 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Block-原理"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7AE5E920B3A7B90033356D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CE7AE61220B3ED740033356D /* main1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main1.cpp; sourceTree = "<group>"; };
+		CE7AE61320B3ED740033356D /* main4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main4.cpp; sourceTree = "<group>"; };
+		CE7AE61420B3ED740033356D /* main0.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main0.cpp; sourceTree = "<group>"; };
+		CE7AE61520B3ED740033356D /* main2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main2.cpp; sourceTree = "<group>"; };
+		CE7AE61620B3ED740033356D /* main3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main3.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +62,11 @@
 		CE7AE5E820B3A7B90033356D /* Block-原理 */ = {
 			isa = PBXGroup;
 			children = (
+				CE7AE61420B3ED740033356D /* main0.cpp */,
+				CE7AE61220B3ED740033356D /* main1.cpp */,
+				CE7AE61520B3ED740033356D /* main2.cpp */,
+				CE7AE61620B3ED740033356D /* main3.cpp */,
+				CE7AE61320B3ED740033356D /* main4.cpp */,
 				CE7AE5E920B3A7B90033356D /* main.m */,
 			);
 			path = "Block-原理";
