@@ -30,6 +30,7 @@
 		CE7AE61420B3ED740033356D /* main0.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main0.cpp; sourceTree = "<group>"; };
 		CE7AE61520B3ED740033356D /* main2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main2.cpp; sourceTree = "<group>"; };
 		CE7AE61620B3ED740033356D /* main3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main3.cpp; sourceTree = "<group>"; };
+		CE7AE61C20B4FD230033356D /* main5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main5.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +63,7 @@
 		CE7AE5E820B3A7B90033356D /* Block-原理 */ = {
 			isa = PBXGroup;
 			children = (
+				CE7AE61C20B4FD230033356D /* main5.cpp */,
 				CE7AE61420B3ED740033356D /* main0.cpp */,
 				CE7AE61220B3ED740033356D /* main1.cpp */,
 				CE7AE61520B3ED740033356D /* main2.cpp */,

@@ -23,6 +23,48 @@ void test() {
 }
 
 
+/// block类型
+void blockType() {
+    void(^block1)(void) = ^ {
+        NSLog(@"block1-----");
+    };
+
+    NSLog(@"block1类型---%@",[block1 class]);
+
+    static int a = 10;
+    void(^block2)(void) = ^ {
+        NSLog(@"block1-----%d",a);
+    };
+    NSLog(@"block2类型---%@",[block2 class]);
+
+    void(^block3)(void) = ^ {
+        NSLog(@"block3-----%d---%d",number1_,number2_);
+    };
+    NSLog(@"block3类型---%@",[block3 class]);
+
+
+
+    int b = 20;
+    void(^block4)(void) = ^ {
+        NSLog(@"block4-----%d--",b);
+
+    };
+    NSLog(@"block4类型---%@",[block4 class]);
+
+    test();
+    block_();
+}
+
+
+//typedef void(^Block)(void);
+//
+//Block returnBlock() {
+//    int a = 10;
+//    return ^{
+//
+//        NSLog(@"a = %d",a);
+//    };
+//}
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
 
@@ -72,37 +114,30 @@ int main(int argc, const char * argv[]) {
 //
 //        block();
 
-
-
-        //// block 类型
-        void(^block1)(void) = ^ {
-            NSLog(@"block1-----");
+        /// 05: __black
+        __block int a = 10;
+        void(^block)(void) = ^{
+            a = 20;
+            NSLog(@"__block-----a = %d",a);
         };
 
-        NSLog(@"block1类型---%@",[block1 class]);
+        block();
 
-        static int a = 10;
-        void(^block2)(void) = ^ {
-            NSLog(@"block1-----%d",a);
-        };
-        NSLog(@"block2类型---%@",[block2 class]);
-
-        void(^block3)(void) = ^ {
-            NSLog(@"block3-----%d---%d",number1_,number2_);
-        };
-        NSLog(@"block3类型---%@",[block3 class]);
+        //// 1)block 类型
+        //   blockType()
 
 
+        /// 2)block copy
 
-        int b = 20;
-        void(^block4)(void) = ^ {
-            NSLog(@"block4-----%d--",b);
+//        Block block = returnBlock();
+//        block();
+//        NSLog(@"block类型---%@",[block class]);
 
-        };
-        NSLog(@"block4类型---%@",[block4 class]);
-
-        test();
-        block_();
+//        int a = 10;
+//        Block block = ^{
+//            NSLog(@"-----a = %d",a);
+//        };
+//       NSLog(@"block类型---%@",[block class]);
 
     }
     return 0;
